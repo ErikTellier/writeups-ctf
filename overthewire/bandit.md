@@ -47,3 +47,27 @@ cd inhere/
 ls -la
 cat ...Hiding-From-You
 ```
+
+# Level 4 -> 5
+
+**connection :**
+`ssh -p 2220 bandit4@bandit.labs.overthewire.org`
+
+**solution :** 
+```bash
+cd inhere/
+file ./*
+cat ./-file07
+```
+
+# level 5 -> 6
+
+**connection :**
+`ssh -p 2220 bandit5@bandit.labs.overthewire.org`
+
+**solution :** 
+```bash
+cd inhere/
+find -readable -size 1033c -type f
+cat ./maybehere07/.file2
+```
