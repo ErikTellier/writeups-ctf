@@ -169,3 +169,49 @@ gzip -d data8.gz
 file data8
 cat data8
 ```
+
+# Level 13 -> 14
+
+**connection :**
+`ssh -p 2220 bandit13@bandit.labs.overthewire.org`
+
+**solution :** 
+```bash
+cat sshkey.private
+exit
+chmod 600 key
+ssh -p 2220 -i ".key" bandit14@bandit.labs.overthewire.org
+cd ../..
+cd etc/bandit_pass
+cat bandit14
+```
+
+# Level 14 -> 15
+
+**connection :**
+`ssh -p 2220 -i ".key" bandit14@bandit.labs.overthewire.org`
+
+**solution :** 
+```bash
+nc localhost 30000
+```
+
+# Level 15 -> 16
+
+**connection :**
+`ssh -p 2220 -i ".key" bandit15@bandit.labs.overthewire.org`
+
+**solution :** 
+```bash
+openssl s_client localhost:30001
+```
+
+# Level 16 -> 17
+
+**connection :**
+`ssh -p 2220 -i ".key" bandit16@bandit.labs.overthewire.org`
+
+**solution :** 
+```bash
+nmap -v -A localhost -p 31000-32000
+```
